@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Активация пользователя</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Создание кода активации</h2>
+        
+        <div class="input-group">
+            <label>ЗАГАДКА</label>
+            <textarea id="riddleInput" rows="3" placeholder='Вставьте загадк:'></textarea>
+            <button id="parseBtn" class="secondary">РАСПОЗНАТЬ</button>
+        </div>
+        
+        <hr class="divider">
+        
+        <div class="row">
+            <div class="input-group">
+                <label>ЗНАЧЕНИЕ A</label>
+                <input type="text" id="fieldA" placeholder="Будет заполнено автоматически">
+            </div>
+            
+            <div class="input-group">
+                <label>ЗНАЧЕНИЕ B</label>
+                <input type="text" id="fieldB" placeholder="Будет заполнено автоматически">
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <label>ПОЛЬЗОВАТЕЛЬ</label>
+            <input type="text" id="username" placeholder="Например: admin">
+        </div>
+        
+        <div class="input-group">
+            <label>MAC АДРЕС</label>
+            <input type="text" id="mac" placeholder="Например: 00:00:00:aa:0c:00">
+        </div>
+        
+        <button id="generateBtn">СГЕНЕРИРОВАТЬ КОД</button>
+        
+        <div id="result" style="display: none;">
+            <div class="result">
+                <div class="result-label">СГЕНЕРИРОВАННЫЙ КОД:</div>
+                <div class="result-value" id="codeResult"></div>
+                <div class="fingerprint-info" id="fingerprintInfo"></div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
